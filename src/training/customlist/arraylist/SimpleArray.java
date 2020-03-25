@@ -27,7 +27,7 @@ public class SimpleArray <E> implements Simple<E> {
     public boolean add(E e) {
         try {
             E[] temp = values;
-            values = (E[]) new Object[temp.length+1];
+            values = (E[]) new Object[temp.length+1];  //because you can't directly create an array of generic type in Java
             System.arraycopy(temp,0,values,0,temp.length);
             values[values.length-1]=e;
             return true;
